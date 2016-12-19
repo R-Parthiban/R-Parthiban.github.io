@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="Parthiban" content="">
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script type="text/javascript" src="jquery.validate.min.js"></script>
+<script type="text/javascript" src="validate.js"></script>
+    <!--All CSS links-->
+
+    <title>Holiday</title>
+    <link href="jquery.multiselect.css" rel="stylesheet" type="text/css">
+    <link rel="icon" type="image/png" href="img/icon.png">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="css/freelancer.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+    <link rel="stylesheet" type="text/css" media="all" href="css/style-autocomplete.css">
+
+    <!-- Custom Fonts -->
+
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+/**
+  * Basic jQuery Validation Form Demo Code
+  * Copyright Sam Deering 2012
+  * Licence: http://www.jquery4u.com/license/
+  */
+/**(function($,W,D)
+{
+    var JQUERY4U = {};
+
+    JQUERY4U.UTIL =
+    {
+        setupFormValidation: function()
+        {
+            //form validation rules
+            $("#register-form").validate({
+                rules: {
+                    Skills: "required",
+                    Location: "required",
+                    
+                    dropdown_1:"required",
+                    dropdown_2:"required",
+                    dropdown_3:"required",
+                    dropdown_4:"required",
+                    dropdown_5:"required",
+                },
+                
+                messages: {
+                    name: "Please enter your Skills",
+                    Location: "Please enter your Location",
+                    
+                    
+                    dropdown_1:"please select a value",
+                    dropdown_2:"please select a value",
+                    dropdown_3:"please select a value",
+                    dropdown_4:"please select a value",
+                    dropdown_5:"please select a value"
+
+                },
+                submitHandler: function(form) {
+                    form.submit();
+                }
+            });
+        }
+    }
+
+    //when the dom has loaded setup form validation rules
+    $(D).ready(function($) {
+        JQUERY4U.UTIL.setupFormValidation();
+    });
+
+})(jQuery, window, document);
+
+
+$(document).ready(function() {
+    $('#register-form').formValidation({
+        framework: 'bootstrap',
+        excluded: ':disabled',
+        icon: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        },
+        fields: {
+            Skills: {
+                validators: {
+                    notEmpty: {
+                        message: 'The ffield  is required'
+                    }
+                }
+            },
+            Location: {
+                validators: {
+                    notEmpty: {
+                        message: 'The field is required'
+                    }
+                }
+            }
+        }
+    });
+});*/
+</script>
+<script type="text/javascript">
+  function validation(){
+    var isValid = true;
+                            // validation on form and update isValid variable accordingly.
+
+ if(isValid) {
+    window.location = 'landingpage.html'; //  desired location
+ }
+
+ return false; // false to prevent form from submission.
+}
+  }
+</script>
+
+<style type="text/css">
+  .Searchbtn{
+    text-align: center;
+  }
+  
+.ui-autocomplete {
+  z-index: 215000000 !important;
+}
+</style>
+	
+</head>
+<body>
+
+<!-- Button trigger modal -->
+<button class="btn btn-primary btn-md" data-toggle="modal" data-target="#myModalNorm">
+    Launch Normal Form
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModalNorm" tabindex="-1" role="dialog" 
+     aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <button type="button" class="close" 
+                   data-dismiss="modal">
+                       <span aria-hidden="true">&times;</span>
+                       <span class="sr-only">Close</span>
+                </button>
+                <div class="text-center" style="background-color: black">
+                <h4 class="modal-title" id="myModalLabel" >
+                   <span style="color: white"> Advanced Search</span>
+                </h4>
+                </div>
+            </div>
+            
+            <!-- Modal Body -->
+            <div class="modal-body">
+                
+                <form role="form" class="form-horizontal" id="register-form" method="post" action="landingpage.html"  >
+                  	<div class="form-group">
+                  			<label for="keySkills" class="col-sm-2 control-label">keySkills</label>
+                  		<div class="col-sm-10">
+                    		<input id="name" class="form-control" name="Skills" class="ui-autocomplete" type="text" placeholder="Skills,Designation,Companies" />
+                        <div id="container_tags">
+                        </div>
+                  		</div>
+                  	</div>
+                   	<div class="form-group">
+                  			<label for="Location" class="col-sm-2 control-label">Location</label>
+                  		<div class="col-sm-10">
+                    		<input id="Location" class="form-control" type="text" name="Location" placeholder="Enter the cities you want to work in" />
+                  		</div>
+                  	</div>
+                   	<div class="form-group">
+                  			<label for="dropdown_1"  class="col-sm-2">Work Experience</label>
+                  		  <div class="col-sm-4">
+            				        <select class = "form-control"  id="dropdown-1" class="col-sm-6" name="dropdown_1"  >
+                              	<option value="" disabled selected>Select</option>
+                            	 <option value="0">0</option>
+                            	 <option value="1">1</option>
+                            	 <option value="2">2</option>
+                            	 <option value="3">3</option>
+                            	 <option value="4">4</option>
+                            	 <option value="5">5</option>
+                            	 <option value="6">>5</option>
+                        	     </select>
+                        </div>
+                    
+                        <label for="dropdown_2"  class="col-sm-2">Years</label>
+                        <div class="col-sm-4">
+                        	   <select class = "form-control" id="dropdown-2"  name="dropdown_2" >
+                        		   <option value="" disabled selected>Select</option>
+                            	 <option value="0">0</option>
+                            	 <option value="1">1</option>
+                            	 <option value="2">2</option>
+                            	 <option value="3">3</option>
+                            	 <option value="4">4</option>
+                            	 <option value="5">5</option>
+                            	 <option value="6">>5</option>
+							                 </select>
+                        </div>
+                  </div>
+                   	  <div class="form-group">
+                   		<label for="dropdown_1"  class="col-sm-2">Expected Salary</label>
+                  		<div class="col-sm-4">
+            				<select class = "form-control"  id="dropdown-3"  name="dropdown_3"  >
+                            	<option value="" disabled selected >Min</option>
+                            	<option value="0">< 0.5</option>
+                             	<option value="1">1</option>
+                            	<option value="2">2</option>
+                            	<option value="3">3</option>
+                            	<option value="4">4</option>
+                            	<option value="5">5</option>
+                            	<option value="6">>5</option>
+
+                        	</select><label>in lakhs</label> 
+
+                        </div>
+                   	</div>
+                   	<div class="form-group">
+                   		<label for="Location" class="col-sm-2 control-label">Industry</label>
+                  		<div class="col-sm-10">
+                    		<select class = "form-control"   multiple id="Twoselect"  name="dropdown_4"  id="dropdown-4">
+                        		 <option value="C++">C++</option>
+							               <option value="C#">C#</option>
+							               <option value="Java">Java</option>
+							               <option value="Objective-C">Objective-C</option>
+							               <option value="JavaScript">JavaScript</option>
+							               <option value="Perl">Perl</option>
+							               <option value="PHP">PHP</option>
+							               <option value="Ruby on Rails">Ruby on Rails</option>
+							               <option value="Android">Android</option>
+							               <option value="iOS">iOS</option>
+							               <option value="HTML">HTML</option>
+							               <option value="XML">XML</option>
+							           </select>
+                  		</div>
+                   	</div>
+                   	<div class="form-group">
+                   		<label for="dropdown_1"  class="col-sm-2">Job Category</label>
+                  		<div class="col-sm-10">
+            				<select class = "form-control"  id="dropdown-5"  name="dropdown_5"  >
+                            	<option value="" disabled selected >Select your areas of expertise</option>
+                            	<option value="0">d1</option>
+                             	<option value="1">d2</option>
+                            	<option value="2">d3</option>
+                            	<option value="3">d4</option>
+                            	<option value="4">d5</option>
+                            	<option value="5">d6</option>
+                            	<option value="6">d7</option>
+
+                        	</select>
+
+                        </div>
+                   	</div>
+                   	<div class="form-group">
+                   		<label for="Job" class="col-sm-2 control-label">Job type</label>
+                   		<div class="col-sm-10">
+                   			<div class="btn-group" role="group" aria-label="..."  id="Job1">
+  								<button type="button" class="btn btn-default btn active" >All Jobs</button>
+  								<button type="button" class="btn btn-default">Company Jobs</button>
+  								<button type="button" class="btn btn-default">Consultancy Jobs</button>
+							</div> 
+                   		</div>
+                   	</div>
+                   	<div class="form-group">
+                   		<label for="sort" class="col-sm-2 control-label">Sort by</label>
+                   		<div class="col-sm-10">
+                   			<div class="btn-group" role="group" aria-label="..." id="sort1">
+  								            <button type="button" class="btn btn-default btn active" autofocus="true">Relevance</button>
+  								            <button type="button" class="btn btn-default">Dates</button>
+  							         </div> 
+                   		</div>
+                   	</div>
+                    <div class="form-group">
+                        <div class="col-xs-5 col-xs-offset-3">
+                            <input type = "submit" value = "Submit" onClick = "validation();"/>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                        </div>
+                    </div>
+                  </form>
+              </div>                       
+        </div>
+    </div>
+</div>
+<!-- Modal for displaying the messages -->
+<div class="modal fade" id="messageModal" tabindex="-1" role="dialog" aria-labelledby="Login" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h5 class="modal-title">Errors</h5>
+            </div>
+
+            <div class="modal-body">
+                <!-- The messages container -->
+                <div id="errors"></div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+$(document).ready(function() {
+    $('#register-form')
+        .formValidation({
+            framework: 'bootstrap',
+            err: {
+                container: '#errors'
+            },
+            icon: {
+                valid: 'glyphicon glyphicon-ok',
+                invalid: 'glyphicon glyphicon-remove',
+                validating: 'glyphicon glyphicon-refresh'
+            },
+            fields: {
+                Skills: {
+                    row: '.col-sm-10',
+                    validators: {
+                        notEmpty: {
+                            message: 'The first name is required'
+                        }
+                    }
+                },
+                Location: {
+                    row: '.col-sm-10',
+                    validators: {
+                        notEmpty: {
+                            message: 'The last name is required'
+                        }
+                    }
+                }
+              }
+
+            })
+        .on('err.form.fv', function(e) {
+            // Show the message modal
+            $('#messageModal').modal('show');
+        });
+});
+</script>
+
+<script src="jquery.min.js"></script>
+<script src="jquery.multiselect.js"></script>
+<script>
+$('#Twoselect').multiselect({
+    columns: 1,
+    placeholder: 'Select the industry where you want to work'
+});
+$('#Job1 button').click(function() {
+    $(this).addClass('active').siblings().removeClass('active');
+
+    // TODO: insert whatever you want to do with $(this) here
+});
+$('#sort1 button').click(function() {
+    $(this).addClass('active').siblings().removeClass('active');
+
+    // TODO: insert whatever you want to do with $(this) here
+});
+
+</script>
+ <script type="text/javascript" src="jquery-1.9.1.min.js"></script>
+  <script type="text/javascript" src="jquery.autocomplete.min.js"></script>
+  <script type="text/javascript" src="currency-autocomplete.js"></script>
+  
+
+
+
+</body>
+</html>
